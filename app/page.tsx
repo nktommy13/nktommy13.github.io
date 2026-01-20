@@ -1,64 +1,81 @@
+"use client";
+
 import Image from "next/image";
+import Link from "next/link";
+import { motion } from "framer-motion";
+import { ArrowRight } from "lucide-react";
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+    <div className="flex flex-col items-center justify-center min-h-[calc(100vh-theme(spacing.20))] py-12 px-4 sm:px-6 lg:px-8">
+      <main className="max-w-4xl w-full space-y-12">
+
+        {/* Hero Section */}
+        <div className="flex flex-col md:flex-row items-center gap-12">
+
+          {/* Text Content */}
+          <motion.div
+            initial={{ opacity: 0, x: -20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5 }}
+            className="flex-1 text-center md:text-left space-y-6"
           >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+            <div className="space-y-2">
+              <h2 className="text-primary font-medium tracking-wide text-sm uppercase">
+                Associate Professor of Economics
+              </h2>
+              <h1 className="text-4xl md:text-5xl font-serif font-bold text-foreground tracking-tight">
+                Yong Song
+              </h1>
+              <p className="text-xl text-muted-foreground font-light">
+                University of Melbourne
+              </p>
+            </div>
+
+            <p className="text-muted-foreground leading-relaxed max-w-lg mx-auto md:mx-0">
+              My research focuses on Bayesian nonparametric modelling, financial econometrics, time series analysis, and empirical macroeconomics. I am interested in applying machine learning techniques to economic problems.
+            </p>
+
+            <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start pt-4">
+              <Link
+                href="/research"
+                className="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-primary-foreground bg-primary hover:bg-primary/90 transition-all shadow-sm hover:shadow-md"
+              >
+                View Research
+                <ArrowRight className="ml-2 h-4 w-4" />
+              </Link>
+              <Link
+                href="/teaching"
+                className="inline-flex items-center justify-center px-6 py-3 border border-input bg-background/50 backdrop-blur-sm text-base font-medium rounded-md text-foreground hover:bg-accent transition-all hover:text-accent-foreground"
+              >
+                Teaching
+              </Link>
+            </div>
+          </motion.div>
+
+          {/* Profile Image */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+            className="flex-shrink-0 relative"
           >
-            Documentation
-          </a>
+            <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-2xl overflow-hidden shadow-2xl border-4 border-background ring-1 ring-border/20">
+              <Image
+                src="/assets/profile.jpg"
+                alt="Yong Song"
+                fill
+                priority
+                className="object-cover"
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+              />
+            </div>
+            {/* Decorative background blob */}
+            <div className="absolute -z-10 top-4 -right-4 w-full h-full bg-primary/10 rounded-2xl blur-xl" />
+          </motion.div>
+
         </div>
+
       </main>
     </div>
   );
