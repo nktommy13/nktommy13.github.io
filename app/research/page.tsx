@@ -159,7 +159,8 @@ const papers = [
 ];
 
 export default function ResearchPage() {
-    const workingPapers = papers.filter(p => !p.journal);
+    const studyNotes = papers.filter(p => p.year === "Note");
+    const workingPapers = papers.filter(p => !p.journal && p.year !== "Note");
     const publications = papers.filter(p => p.journal);
 
     const container = {
@@ -261,7 +262,40 @@ export default function ResearchPage() {
                         ))}
                     </motion.div>
                 </section>
-            </div>
-        </div>
+
+                {/* Study Notes */}
+                <section>
+                    <h2 className="text-2xl font-bold mb-6 flex items-center gap-2">
+                        <span className="w-8 h-1 bg-muted-foreground rounded-full inline-block"></span>
+                        Study Notes
+                    </h2>
+                    <motion.div
+                        variants={container}
+                        initial="hidden"
+                        animate="show"
+                        className="space-y-6"
+                    >
+                        {studyNotes.map((paper, idx) => (
+                            <motion.div key={idx} variants={item} className="bg-muted/30 border border-border/50 rounded-lg p-6 hover:bg-muted/50 transition-colors">
+                                <h3 className="text-lg font-semibold mb-2">{paper.title}</h3>
+                                <div className="flex flex-wrap gap-2">
+                                    {Object.entries(paper.links).map(([key, url]) => (
+                                        <a
+                                            key={key}
+                                            href={url}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="inline-flex items-center text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
+                                        >
+                                            <FileText className="mr-1 h-3 w-3" />
+                                            {key.toUpperCase()}
+                                        </a>
+                                    ))}
+                                </div>
+                            </motion.div>
+                        ))}
+                    </motion.div>
+                </section>
+            </div>        </div>
     );
 }
