@@ -103,16 +103,16 @@ export default function TeachingPage() {
                     initial={{ opacity: 0 }}
                     whileInView={{ opacity: 1 }}
                     viewport={{ once: true }}
-                    className="flex flex-col items-center text-center gap-8"
+                    className="flex flex-col items-center text-center gap-16"
                 >
                     <h2 className="text-2xl font-serif font-bold">Funny Things</h2>
 
-                    <div className="max-w-2xl space-y-6">
+                    <div className="max-w-xl w-full space-y-6">
                         <p className="text-xl font-medium text-muted-foreground italic font-serif">
                             &quot;If you think you can pass my exam by intuition&quot;
                         </p>
 
-                        <div className="relative w-full aspect-video rounded-xl overflow-hidden shadow-2xl border border-border">
+                        <div className="relative w-full aspect-[4/3] rounded-xl overflow-hidden shadow-2xl border border-border">
                             <Image
                                 src="/assets/fall1.gif"
                                 alt="Funny gif about passing exams"
@@ -123,12 +123,12 @@ export default function TeachingPage() {
                         </div>
                     </div>
 
-                    <div className="max-w-2xl space-y-6">
+                    <div className="max-w-xl w-full space-y-6">
                         <p className="text-xl font-medium text-muted-foreground italic font-serif">
                             &quot;You may fail if you do not study hard. Then, you may fail again in the makeup exam, too.&quot;
                         </p>
 
-                        <div className="relative w-full aspect-video rounded-xl overflow-hidden shadow-2xl border border-border">
+                        <div className="relative w-full aspect-[4/3] rounded-xl overflow-hidden shadow-2xl border border-border">
                             <Image
                                 src="/assets/fall2.gif"
                                 alt="Funny gif about passing exams"
