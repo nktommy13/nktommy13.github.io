@@ -122,6 +122,22 @@ export default function TeachingPage() {
                             />
                         </div>
                     </div>
+
+                    <div className="max-w-2xl space-y-6">
+                        <p className="text-xl font-medium text-muted-foreground italic font-serif">
+                            &quot;You may fail if you do not study hard. Then, you may fail again in the makeup exam, too.&quot;
+                        </p>
+
+                        <div className="relative w-full aspect-video rounded-xl overflow-hidden shadow-2xl border border-border">
+                            <Image
+                                src="/assets/fall2.gif"
+                                alt="Funny gif about passing exams"
+                                fill
+                                className="object-cover"
+                                unoptimized
+                            />
+                        </div>
+                    </div>
                 </motion.div>
             </section>
         </div>
