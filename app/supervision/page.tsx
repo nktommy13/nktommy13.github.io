@@ -5,10 +5,10 @@ import { Users, GraduationCap } from "lucide-react";
 
 const students = {
     active: [
-        { name: "Tao Sun", status: "current" },
         { name: "Zheng Fan", status: "current" },
     ],
     placements: [
+        { name: "Tao Sum", year: "2025", placement: "University of Melbourne" },
         { name: "Xuan Vu", year: "2024", placement: "University of Melbourne" },
         { name: "Alex Ballantyne", year: "2022", placement: "Grattan Institute" },
         { name: "Zhuo Li", year: "2021", placement: "Postdoctoral Research Fellow at Monash University" }
@@ -25,7 +25,7 @@ export default function SupervisionPage() {
             >
                 <h1 className="text-4xl font-serif font-bold mb-4">Supervision</h1>
                 <p className="text-muted-foreground text-lg">
-                    I have checked the following PhD students.
+                    I have supervised the following PhD students.
                 </p>
             </motion.div>
 
@@ -50,7 +50,7 @@ export default function SupervisionPage() {
                     </ul>
                 </motion.section>
 
-                {/* Placements */}
+                {/* First Placements */}
                 <motion.section
                     initial={{ opacity: 0, x: -20 }}
                     animate={{ opacity: 1, x: 0 }}
@@ -58,7 +58,7 @@ export default function SupervisionPage() {
                 >
                     <h2 className="text-2xl font-bold mb-6 flex items-center gap-2">
                         <GraduationCap className="text-accent-foreground" />
-                        Placements
+                        First Placements
                     </h2>
                     <div className="space-y-4">
                         {students.placements.map((student, idx) => (

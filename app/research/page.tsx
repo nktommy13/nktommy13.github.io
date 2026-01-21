@@ -189,6 +189,10 @@ export default function ResearchPage() {
                 <p className="text-muted-foreground text-lg">
                     My main research interests lie in Bayesian Econometrics and Time Series Analysis.
                 </p>
+                <blockquote className="mt-6 border-l-4 border-primary pl-4 italic text-muted-foreground text-lg">
+                    &quot;A Bayesian is one who, vaguely expecting a horse, and catching a glimpse of a donkey, strongly believes he has seen a mule.&quot;
+                </blockquote>
+
             </motion.div>
 
             <div className="space-y-16">
