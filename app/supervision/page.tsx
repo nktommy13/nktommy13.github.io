@@ -8,7 +8,7 @@ const students = {
         { name: "Zheng Fan", status: "current" },
     ],
     placements: [
-        { name: "Tao Sum", year: "2025", placement: "University of Melbourne" },
+        { name: "Tao Sun", year: "2025", placement: "University of Melbourne" },
         { name: "Xuan Vu", year: "2024", placement: "University of Melbourne" },
         { name: "Alex Ballantyne", year: "2022", placement: "Grattan Institute" },
         { name: "Zhuo Li", year: "2021", placement: "Postdoctoral Research Fellow at Monash University" }

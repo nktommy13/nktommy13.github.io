@@ -37,6 +37,9 @@ export default function Home() {
               <p className="text-muted-foreground leading-relaxed max-w-lg mx-auto md:mx-0">
                 My research focuses on Bayesian nonparametric modelling, financial econometrics, time series analysis, and empirical macroeconomics. I am interested in applying machine learning techniques to economic problems.
               </p>
+              <blockquote className="mt-6 border-l-4 border-primary pl-4 italic text-muted-foreground text-lg">
+                &quot;天堂有路你不走，学海无涯苦作舟&quot;
+              </blockquote>
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start pt-4">
                 <Link

@@ -6,6 +6,12 @@ import Image from "next/image";
 
 const courses = [
     {
+        code: "ECON90055",
+        title: "Computational Economics",
+        period: "2026",
+        description: "Deep Learning, AI applications and flexible modelling. Personalised to each student. PhD only."
+    },
+    {
         code: null,
         title: "Topics in Economics: Deep Learning",
         period: "2025",
