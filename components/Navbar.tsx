@@ -12,6 +12,7 @@ const navItems = [
     { name: "Research", href: "/research" },
     { name: "Teaching", href: "/teaching" },
     { name: "Supervision", href: "/supervision" },
+    { name: "AI", href: "/ai" },
 ];
 
 export function Navbar() {
