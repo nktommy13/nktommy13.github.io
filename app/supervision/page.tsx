@@ -6,6 +6,8 @@ import { Users, GraduationCap } from "lucide-react";
 const students = {
     active: [
         { name: "Zheng Fan", status: "current" },
+        { name: "Yuru Sun", status: "current" },
+        { name: "Ray Gomez", status: "current" },
     ],
     placements: [
         { name: "Tao Sun", year: "2025", placement: "University of Melbourne" },
