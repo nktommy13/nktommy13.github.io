@@ -61,6 +61,28 @@ export default function AIPageContent({ chapters }: AIPageContentProps) {
                 <section>
                     <h2 className="text-2xl font-bold mb-6 flex items-center gap-2">
                         <span className="w-8 h-1 bg-accent rounded-full inline-block"></span>
+                        Angry Econometrician
+                    </h2>
+                    <motion.div
+                        variants={item}
+                        initial="hidden"
+                        animate="show"
+                        className="bg-card border border-border/50 rounded-lg overflow-hidden shadow-sm mb-16"
+                    >
+                        <video
+                            src="/assets/rap.mp4"
+                            controls
+                            className="w-full aspect-video object-cover"
+                            preload="metadata"
+                        >
+                            Your browser does not support the video tag.
+                        </video>
+                    </motion.div>
+                </section>
+
+                <section>
+                    <h2 className="text-2xl font-bold mb-6 flex items-center gap-2">
+                        <span className="w-8 h-1 bg-accent rounded-full inline-block"></span>
                         Reports
                     </h2>
                     <motion.div
